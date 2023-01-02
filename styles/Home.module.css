@@ -571,6 +571,7 @@
 .btnScrollTop {
   position: absolute;
   top: -40px;
+  transform: translateX(-50%);
   transition: filter 0.2s ease-in-out;
   z-index: 3;
 }
@@ -580,6 +581,7 @@
 }
 @media (min-width: 660px) {
   .btnScrollTop {
+    transform: none;
     top: 10px;
     right: 20px;
   }
