@@ -525,6 +525,8 @@
 .contactBox .contactLink {
   display: block;
   line-height: 2;
+  width: max-content;
+  margin: auto;
 }
 
 .openingHours p {
