@@ -471,25 +471,26 @@
 .contactBox:hover {
   box-shadow: 0 0 15px #000000de;
 }
-@media (min-width: 24rem) {
+@media (min-width: 364px) {
   .contactBox {
     padding: 20px 40px;
     left: 30px;
     right: 30px;
   }
 }
-@media (min-width: 750px) {
+@media (min-width: calc(43rem + 110px)) {
   /* Matches value in googleMap.tsx */
   .contactBox {
     left: auto;
     right: 30px;
-    width: min(500px, 100% - 60px);
+    width: max-content;
+    max-width: calc(100% - 20px);
     transform: none;
   }
 }
-@media (min-width: 92rem) {
+@media (min-width: 1400px) {
   .contactBox {
-    width: min(680px, 100% - 60px);
+    min-width: 650px;
   }
 }
 
@@ -506,20 +507,11 @@
 .contactColumns {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
+  column-gap: 40px;
+  justify-content: space-around;
 }
 .contactColumns > * {
-  flex: 0 1 100%;
-}
-@media (min-width: 34rem) {
-  .contactColumns {
-    text-align: left;
-    justify-content: space-between;
-  }
-  .contactColumns > * {
-    flex: 0 1 auto;
-  }
+  flex: 0 1 auto;
 }
 
 .contactBox .contactLink {

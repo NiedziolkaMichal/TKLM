@@ -1,7 +1,7 @@
 import styles from "../../../styles/Home.module.css";
 import { RefObject, useEffect, useRef } from "react";
 import { Loader } from "@googlemaps/js-api-loader";
-import { isInViewport } from "../../util/common";
+import { getRemInPx, isInViewport } from "../../util/common";
 import HomeMapStyle from "../../../public/homeMapStyle.json";
 import { requestIdleCallback as _requestIdleCallback } from "next/dist/client/request-idle-callback";
 
@@ -58,7 +58,7 @@ function loadMap(loader: Loader, mapRef: MapRef) {
 }
 
 function getMapCenterLocation(): google.maps.LatLngLiteral {
-  if (window.innerWidth >= 750) {
+  if (window.innerWidth >= (getRemInPx() * 43 + 110)) {
     return { lat: 50.05, lng: 20.1 };
   } else {
     return { lat: 49.96, lng: 19.95 };
