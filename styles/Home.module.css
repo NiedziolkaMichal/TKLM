@@ -434,17 +434,12 @@
 .partner {
   filter: drop-shadow(5px 5px 5px #252525);
   width: auto;
-  height: 20px;
+  height: 40px;
   transition: filter 0.3s ease-in-out;
   overflow: visible;
 }
 .partner:hover {
   filter: drop-shadow(5px 5px 5px #252525) brightness(1.2);
-}
-@media (min-width: 700px) {
-  .partner {
-    height: 30px;
-  }
 }
 @media (min-width: 1200px) {
   .partner {
