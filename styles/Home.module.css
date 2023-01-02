@@ -452,15 +452,33 @@
   }
 }
 
+/* Map Section */
+.mapSection {
+  display: flow-root;
+  position: relative;
+  margin-top: -100px;
+  margin-bottom: -100px;
+}
+
+/* Google Map */
+.googleMap {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-primary);
+}
+
 /* Contact */
 .contactBox {
-  position: absolute;
   z-index: 2;
   background: linear-gradient(90deg, #780b1f96, #58244896, #3f256896);
   box-shadow: 0 0 10px #0000008f;
-  right: 10px;
-  left: 10px;
-  transform: translateY(160px);
+  
+  margin-top: 300px;
+  margin-bottom: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
+  
   width: auto;
   backdrop-filter: blur(4px) grayscale(1);
   border-radius: 20px;
@@ -474,17 +492,17 @@
 @media (min-width: 364px) {
   .contactBox {
     padding: 20px 40px;
-    left: 30px;
-    right: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
   }
 }
 @media (min-width: calc(43rem + 110px)) {
   /* Matches value in googleMap.tsx */
   .contactBox {
-    left: auto;
-    right: 30px;
+    margin-left: auto;
     width: max-content;
     max-width: calc(100% - 20px);
+    margin-top: 160px;
     transform: none;
   }
 }
@@ -545,25 +563,6 @@
 }
 .contactLink:hover svg {
   filter: brightness(1.3);
-}
-
-/* Google Map */
-.googleMap {
-  height: 700px;
-  width: 100%;
-  margin-top: -100px;
-  margin-bottom: -100px;
-  background-color: var(--color-primary);
-}
-@media (min-width: 34rem) {
-  .googleMap {
-    height: 600px;
-  }
-}
-@media (min-width: 750px) {
-  .googleMap {
-    height: 500px;
-  }
 }
 
 /* Footer */

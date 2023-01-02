@@ -29,8 +29,10 @@ export default function Home() {
         <Wave previousSectionClass={styles.sectionGrey} nextSectionClass={styles.sectionDark} styleIndex={2} />
         <Partners />
         <Wave previousSectionClass={styles.sectionDark} nextSectionClass="" styleIndex={3} />
-        <Contact />
-        <Map />
+        <section className={styles.section + ' ' + styles.mapSection}>
+          <Map />
+          <Contact />
+        </section>
         <Wave previousSectionClass="" nextSectionClass={styles.sectionFooterBackground} styleIndex={4} />
         <Footer />
       </main>
