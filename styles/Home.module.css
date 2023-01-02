@@ -134,6 +134,8 @@
 
 /* Header */
 .header {
+  display: flex;
+  justify-content: space-between;
   position: absolute;
   z-index: 3;
   width: 100%;
@@ -143,9 +145,8 @@
 
 .headerLogo {
   width: 133px;
-  position: absolute;
-  top: -22px;
-  left: 53px;
+  margin: auto;
+  transform: translateY(-22px);
   transition: filter 0.3s ease-in-out;
 }
 .headerLogo:hover {
@@ -160,6 +161,9 @@
 @media (min-width: 600px) {
   .navBar {
     display: block;
+  }
+  .headerLogo {
+    margin: 0 0 0 53px;
   }
 }
 
