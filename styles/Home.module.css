@@ -473,12 +473,7 @@
   z-index: 2;
   background: linear-gradient(90deg, #780b1f96, #58244896, #3f256896);
   box-shadow: 0 0 10px #0000008f;
-  
-  margin-top: 300px;
-  margin-bottom: 100px;
-  margin-left: 10px;
-  margin-right: 10px;
-  
+  margin: 300px 10px 100px;
   width: auto;
   backdrop-filter: blur(4px) grayscale(1);
   border-radius: 20px;
