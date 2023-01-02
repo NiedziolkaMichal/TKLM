@@ -3,6 +3,7 @@ import { RefObject, useEffect, useRef } from "react";
 import { Loader } from "@googlemaps/js-api-loader";
 import { isInViewport } from "../../util/common";
 import HomeMapStyle from "../../../public/homeMapStyle.json";
+import { requestIdleCallback as _requestIdleCallback } from "next/dist/client/request-idle-callback";
 
 type MapRef = RefObject<HTMLDivElement> & { loaded?: boolean };
 
@@ -26,7 +27,7 @@ function lazyLoadMap(loader: Loader, mapRef: MapRef) {
   if (element && isInViewport(element)) {
     loadMap(loader, mapRef);
   } else {
-    requestIdleCallback(() => loadMap(loader, mapRef));
+    _requestIdleCallback(() => loadMap(loader, mapRef));
   }
 }
 
