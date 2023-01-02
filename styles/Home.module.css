@@ -207,7 +207,7 @@
   margin-top: 175px;
   margin-bottom: 35px;
 
-  font-size: 1.5rem;
+  font-size: min(10vw, 5.7rem);
   position: relative;
   z-index: 2;
   animation: fromTransparent 2s ease-in-out;
@@ -217,42 +217,7 @@
     opacity: 0;
   }
 }
-@media (min-width: 21rem) {
-  /* 336 px */
-  .heroHeading {
-    font-size: 2rem;
-  }
-}
-@media (min-width: 25.5rem) {
-  /* 408 px */
-  .heroHeading {
-    font-size: 2.5rem;
-  }
-}
-@media (min-width: 30rem) {
-  /* 480 px */
-  .heroHeading {
-    font-size: 3rem;
-  }
-}
-@media (min-width: 40rem) {
-  /* 640 px */
-  .heroHeading {
-    font-size: 4rem;
-  }
-}
-@media (min-width: 48rem) {
-  /* 768 px */
-  .heroHeading {
-    font-size: 5rem;
-  }
-}
-@media (min-width: 56.25rem) {
-  /* 900 px */
-  .heroHeading {
-    font-size: 5.7rem;
-  }
-}
+
 .heroFancyText {
   background-clip: text;
   background-image: repeating-linear-gradient(126deg, #f1d409, #fe6c0f, #f1d409);
