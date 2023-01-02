@@ -199,7 +199,7 @@
 /* Hero */
 
 .heroSection {
-  min-height: calc(100vh - 100px);
+  padding-bottom: 10%;
   color: var(--color-secondary);
 }
 
@@ -406,7 +406,6 @@
   box-shadow: 0 3px 10px #3030301a;
   border-radius: 20px;
   flex: 0 1 390px;
-  height: 350px;
   font-size: 1.1rem;
   padding: 1.2rem;
   background-color: white;
