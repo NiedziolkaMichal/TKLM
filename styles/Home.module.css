@@ -158,7 +158,7 @@
   text-align: right;
 }
 
-@media (min-width: 600px) {
+@media (min-width: calc(25rem + 240px)) {
   .navBar {
     display: block;
   }
