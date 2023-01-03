@@ -17,6 +17,8 @@ html {
   scroll-behavior: smooth;
   scrollbar-color: var(--color-special) var(--color-primary);
   scrollbar-width: thin;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 body {
