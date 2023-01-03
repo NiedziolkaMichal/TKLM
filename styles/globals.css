@@ -3,6 +3,7 @@
   --color-primary: #303030;
   --color-secondary: #ffffff;
   --color-special: #ffd54b;
+  --focus-visible-color: #dc142b;
 }
 
 *,
@@ -36,6 +37,11 @@ b {
 
 address {
   all: unset;
+}
+
+*:focus-visible {
+  outline: 3px solid var(--focus-visible-color);
+  outline-offset: 4px;
 }
 
 ::-webkit-scrollbar {

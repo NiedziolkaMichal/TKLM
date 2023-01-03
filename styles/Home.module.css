@@ -326,6 +326,9 @@
   box-shadow: 2px 2px 5px #303030;
   border-radius: 20px;
 }
+.service:focus-visible .serviceForeground {
+  box-shadow: none;
+}
 .serviceForeground > * {
   left: 0.5rem;
   padding-right: 0.5rem;
