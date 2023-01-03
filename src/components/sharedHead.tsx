@@ -8,6 +8,7 @@ export function SharedHead({}) {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="preload" href="/font/Montserrat-minified.woff2" as="font" crossOrigin="" />
       <link rel="apple-touch-icon" href="/favicon/favicon-180.png" />
+      <meta name="theme-color" content="#303030" />
       <link rel="icon" href="/favicon/favicon-32.png" sizes="32x32" />
       <link rel="icon" href="/favicon/favicon-16.png" sizes="16x16" />
     </Head>
