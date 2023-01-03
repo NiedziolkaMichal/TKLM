@@ -280,7 +280,7 @@
   display: grid;
   gap: 15px;
   grid-template-columns: calc(100% - 30px);
-  grid-auto-rows: 200px;
+  grid-auto-rows: 1fr;
   justify-content: center;
 }
 @media (min-width: 530px) {
@@ -330,28 +330,17 @@
   box-shadow: none;
 }
 .serviceForeground > * {
-  left: 0.5rem;
-  padding-right: 0.5rem;
+  padding: 30px 30px;
   text-align: left;
-  position: absolute;
   display: flex;
-  height: 100%;
   align-items: center;
   margin: 0;
-}
-@media (min-width: 20rem) {
-  /* 320 px */
-  .serviceForeground > * {
-    left: 2rem;
-    padding-right: 2rem;
-  }
 }
 .serviceTitle {
   color: var(--color-special);
   font-weight: bold;
   font-size: 1.2rem;
-
-  transition: opacity 0.3s ease-in-out;
+  padding-bottom: 20px;
 }
 @media (min-width: 24rem) {
   /* 384 px */
@@ -360,19 +349,31 @@
   }
 }
 .serviceDescription {
-  z-index: 2;
   color: var(--color-secondary);
   font-size: 1.25rem;
   line-height: 1.5;
+  padding-top: 0;
+}
 
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-.service:hover .serviceDescription {
-  opacity: 1;
-}
-.service:hover .serviceTitle {
-  opacity: 0;
+@media (hover: hover) {
+  .serviceTitle {
+    position: absolute;
+    transition: opacity 0.3s ease-in-out;
+    padding-bottom: 30px;
+    height: 100%;
+  }
+  .serviceDescription {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    padding-top: 30px;
+    height: 100%;
+  }
+  .service:hover .serviceDescription {
+    opacity: 1;
+  }
+  .service:hover .serviceTitle {
+    opacity: 0;
+  }
 }
 
 /* Microsoft Support */
