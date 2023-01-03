@@ -276,7 +276,7 @@
 
 /* Services */
 .services {
-  margin-block: 50px;
+  margin-top: 50px;
   display: grid;
   gap: 15px;
   grid-template-columns: calc(100% - 30px);
@@ -286,6 +286,11 @@
 @media (min-width: 530px) {
   .services {
     grid-template-columns: 500px;
+  }
+}
+@media (min-width: 800px) {
+  .services {
+    margin-bottom: 50px;
   }
 }
 @media (min-width: 1060px) {
@@ -369,7 +374,7 @@
 
 /* Microsoft Support */
 .productLogoGroup {
-  margin-block: 2rem 4rem;
+  margin-block: 3rem 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -378,7 +383,7 @@
 .productLogo {
   filter: drop-shadow(5px 5px 5px #252525);
   width: auto;
-  height: 100px;
+  height: 6rem;
   transition: all 0.3s ease-in-out;
 }
 .productLogo:hover {
@@ -392,7 +397,12 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  margin: 75px 15px 50px;
+  margin: 75px 15px 0;
+}
+@media (min-width: 800px) {
+  .cardGroup {
+    margin-bottom: 40px;
+  }
 }
 
 .card {
@@ -416,13 +426,10 @@
 
 /* Partners */
 .partnerGroup {
-  margin-block: 2rem 4rem;
+  margin-block: 0 70px;
   display: flex;
   justify-content: flex-start;
   gap: 30px;
-}
-.partnerGroup {
-  margin-block: 0 4rem;
 }
 .partner {
   filter: drop-shadow(5px 5px 5px #252525);
@@ -563,9 +570,9 @@
 }
 
 .btnScrollTop {
-  position: absolute;
-  top: -40px;
-  transform: translateX(-50%);
+  display: inline-block;
+  position: relative;
+  transform: translateY(-50%);
   transition: filter 0.2s ease-in-out;
   z-index: 3;
 }
@@ -575,6 +582,7 @@
 }
 @media (min-width: 660px) {
   .btnScrollTop {
+    position: absolute;
     transform: none;
     top: 10px;
     right: 20px;
