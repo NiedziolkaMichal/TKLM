@@ -3,6 +3,7 @@
   text-align: center;
   position: relative;
   display: flow-root; /* To collapse vertical margin */
+  margin-block: -1px; /* Fixes horizontal line under wave, sometimes visible on mobile */
 
   line-height: 1.5;
 }
