@@ -580,7 +580,7 @@
   color: #575656;
   filter: brightness(1.3);
 }
-@media (min-width: 660px) {
+@media (min-width: calc(33rem + 220px)) {
   .btnScrollTop {
     position: absolute;
     transform: none;
@@ -588,7 +588,7 @@
     right: 20px;
   }
 }
-@media (min-width: 900px) {
+@media (min-width: calc(37rem + 300px)) {
   .btnScrollTop {
     right: 80px;
   }
