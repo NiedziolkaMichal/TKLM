@@ -5,10 +5,10 @@ import { navigateToFragment } from "../../util/navigate";
 export function Footer({}) {
   return (
     <footer className={styles.sectionFooterBackground + " " + styles.pageFooter}>
+      <ScrollTop />
       <p>TKLM MATEUSZ MOREK</p>
       <p>ul. Profesora Michała Bobrzyńskiego, nr 43a, lok. 88, 30-348 Kraków</p>
       <p>NIP: 9442264628 REGON: 383707754</p>
-      <ScrollTop />
     </footer>
   );
 }
