@@ -17,12 +17,12 @@ export function MicrosoftSupport({}) {
         Tworzymy i utrzymujemy intranet dla firm w oparciu o <b>SharePoint Online</b>, a także zarządzamy <b>Azure Active Directory</b>.
       </p>
       <div className={styles.productLogoGroup}>
-        <LogoWord className={styles.productLogo} title="Microsoft Word" />
-        <LogoExcel className={styles.productLogo} title="Microsoft Excel" />
-        <LogoPowerPoint className={styles.productLogo} title="Microsoft PowerPoint" />
-        <LogoTeams className={styles.productLogo} title="Microsoft Teams" />
-        <LogoSharePoint className={styles.productLogo} title="Microsoft SharePoint" />
-        <LogoAzureActiveDirectory className={styles.productLogo} title="Microsoft Azure Active Directory" />
+        <LogoWord className={styles.productLogo} aria-label="Microsoft Word" />
+        <LogoExcel className={styles.productLogo} aria-label="Microsoft Excel" />
+        <LogoPowerPoint className={styles.productLogo} aria-label="Microsoft PowerPoint" />
+        <LogoTeams className={styles.productLogo} aria-label="Microsoft Teams" />
+        <LogoSharePoint className={styles.productLogo} aria-label="Microsoft SharePoint" />
+        <LogoAzureActiveDirectory className={styles.productLogo} aria-label="Microsoft Azure Active Directory" />
       </div>
     </section>
   );

@@ -6,7 +6,7 @@ export default function Header({}) {
   return (
     <section className={styles.header}>
       <a className={styles.headerLogo} href={""}>
-        <Logo title="TKLM" />
+        <Logo aria-label="TKLM" />
       </a>
       <nav className={styles.navBar}>
         <a className={styles.navBtn} href="#uslugi" onClick={navigateToFragment}>

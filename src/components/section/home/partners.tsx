@@ -24,21 +24,21 @@ export function Partners({}) {
     <section className={styles.section + " " + styles.sectionDark}>
       <h2>NASI PARTNERZY</h2>
       <InfiniteMovingSlideShow containerClass={styles.partnerGroup} speed={speed}>
-        <LogoAsus className={styles.partner} alt="ASUS" />
-        <LogoCisco className={styles.partner} alt="Cisco" />
-        <LogoDell className={styles.partner} alt="Dell" />
-        <LogoMicrosoft className={styles.partner} alt="Microsoft" />
-        <LogoEset className={styles.partner} alt="ESET" />
-        <LogoLinux className={styles.partner} alt="Linux" />
-        <LogoApple className={styles.partner} alt="Apple" />
-        <LogoBrother className={styles.partner} alt="Brother" />
-        <LogoCanon className={styles.partner} alt="Canon" />
-        <LogoComarch className={styles.partner} alt="Comarch" />
-        <LogoFujitsu className={styles.partner} alt="Fujitsu" />
-        <LogoHp className={styles.partner} alt="HP" />
-        <LogoNetia className={styles.partner} alt="Netia" />
-        <LogoSamsung className={styles.partner} alt="Samsung" />
-        <LogoTeamViewer className={styles.partner} alt="TeamViewer" />
+        <LogoAsus className={styles.partner} aria-label="ASUS" />
+        <LogoCisco className={styles.partner} aria-label="Cisco" />
+        <LogoDell className={styles.partner} aria-label="Dell" />
+        <LogoMicrosoft className={styles.partner} aria-label="Microsoft" />
+        <LogoEset className={styles.partner} aria-label="ESET" />
+        <LogoLinux className={styles.partner} aria-label="Linux" />
+        <LogoApple className={styles.partner} aria-label="Apple" />
+        <LogoBrother className={styles.partner} aria-label="Brother" />
+        <LogoCanon className={styles.partner} aria-label="Canon" />
+        <LogoComarch className={styles.partner} aria-label="Comarch" />
+        <LogoFujitsu className={styles.partner} aria-label="Fujitsu" />
+        <LogoHp className={styles.partner} aria-label="HP" />
+        <LogoNetia className={styles.partner} aria-label="Netia" />
+        <LogoSamsung className={styles.partner} aria-label="Samsung" />
+        <LogoTeamViewer className={styles.partner} aria-label="TeamViewer" />
       </InfiniteMovingSlideShow>
     </section>
   );
