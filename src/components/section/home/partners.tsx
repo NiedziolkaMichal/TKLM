@@ -56,6 +56,7 @@ function useSlideShowSpeed() {
   useEffect(() => {
     const callback = () => setSpeed(calculateSlideShowSpeed());
     addEventListener('resize', callback);
+    callback();
     return () => removeEventListener('resize', callback)
   }, [])
   
