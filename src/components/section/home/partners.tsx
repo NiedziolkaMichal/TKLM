@@ -47,7 +47,7 @@ export function Partners({}) {
 }
 
 function useSlideShowSpeed() {
-  const [speed, setSpeed] = useState(calculateSlideShowSpeed());
+  const [speed, setSpeed] = useState(0);
 
   function calculateSlideShowSpeed() {
     return window.innerWidth < 1000 ? 0.7 : 0.3
