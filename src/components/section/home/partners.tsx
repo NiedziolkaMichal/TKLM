@@ -7,7 +7,6 @@ import LogoDell from "/public/img/logo/logo-dell.svg";
 import LogoMicrosoft from "/public/img/logo/logo-microsoft.svg";
 import LogoEset from "/public/img/logo/logo-eset.svg";
 import LogoLinux from "/public/img/logo/logo-linux.svg";
-import LogoAmazon from "/public/img/logo/logo-amazon.svg";
 import LogoApple from "/public/img/logo/logo-apple.svg";
 import LogoBrother from "/public/img/logo/logo-brother.svg";
 import LogoCanon from "/public/img/logo/logo-canon.svg";
@@ -31,7 +30,6 @@ export function Partners({}) {
         <LogoMicrosoft className={styles.partner} alt="Microsoft" />
         <LogoEset className={styles.partner} alt="ESET" />
         <LogoLinux className={styles.partner} alt="Linux" />
-        <LogoAmazon className={styles.partner} alt="Amazon" />
         <LogoApple className={styles.partner} alt="Apple" />
         <LogoBrother className={styles.partner} alt="Brother" />
         <LogoCanon className={styles.partner} alt="Canon" />
