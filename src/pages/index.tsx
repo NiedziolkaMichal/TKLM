@@ -29,7 +29,7 @@ export default function Home() {
         <Wave previousSectionClass={styles.sectionGrey} nextSectionClass={styles.sectionDark} styleIndex={2} />
         <Partners />
         <Wave previousSectionClass={styles.sectionDark} nextSectionClass="" styleIndex={3} />
-        <section className={styles.section + ' ' + styles.mapSection}>
+        <section className={styles.section + " " + styles.mapSection}>
           <Map />
           <Contact />
         </section>

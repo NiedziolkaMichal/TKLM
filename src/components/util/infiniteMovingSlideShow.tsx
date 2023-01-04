@@ -8,7 +8,7 @@ type ContainerRef = MutableRefObject<null> & {
   lastElementIndex: number;
 };
 
-export function InfiniteMovingSlideShow({ containerClass, speed, children }: { containerClass?: string; speed: number, children: ReactNode[] }) {
+export function InfiniteMovingSlideShow({ containerClass, speed, children }: { containerClass?: string; speed: number; children: ReactNode[] }) {
   const ref: ContainerRef = useRef(null) as ContainerRef;
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export function InfiniteMovingSlideShow({ containerClass, speed, children }: { c
       }
     };
     window.requestAnimationFrame(callBack);
-    return () => (active = false, undefined);
+    return () => ((active = false), undefined);
   }, [ref, speed]);
 
   return (

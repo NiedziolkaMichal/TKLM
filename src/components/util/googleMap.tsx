@@ -58,7 +58,7 @@ function loadMap(loader: Loader, mapRef: MapRef) {
 }
 
 function getMapCenterLocation(): google.maps.LatLngLiteral {
-  if (window.innerWidth >= (getRemInPx() * 43 + 110)) {
+  if (window.innerWidth >= getRemInPx() * 43 + 110) {
     return { lat: 50.05, lng: 20.1 };
   } else {
     return { lat: 49.96, lng: 19.95 };

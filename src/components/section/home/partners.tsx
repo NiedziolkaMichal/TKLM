@@ -19,7 +19,7 @@ import LogoTeamViewer from "/public/img/logo/logo-team-viewer.svg";
 
 export function Partners({}) {
   const speed = useSlideShowSpeed();
-  
+
   return (
     <section className={styles.section + " " + styles.sectionDark}>
       <h2>NASI PARTNERZY</h2>
@@ -48,15 +48,15 @@ function useSlideShowSpeed() {
   const [speed, setSpeed] = useState(0);
 
   function calculateSlideShowSpeed() {
-    return window.innerWidth < 1000 ? 0.7 : 0.3
+    return window.innerWidth < 1000 ? 0.7 : 0.3;
   }
 
   useEffect(() => {
     const callback = () => setSpeed(calculateSlideShowSpeed());
-    addEventListener('resize', callback);
+    addEventListener("resize", callback);
     callback();
-    return () => removeEventListener('resize', callback)
-  }, [])
-  
+    return () => removeEventListener("resize", callback);
+  }, []);
+
   return speed;
 }

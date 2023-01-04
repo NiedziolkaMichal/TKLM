@@ -369,10 +369,12 @@
     padding-top: 30px;
     height: 100%;
   }
-  .service:hover .serviceDescription, .service:focus-visible .serviceDescription {
+  .service:hover .serviceDescription,
+  .service:focus-visible .serviceDescription {
     opacity: 1;
   }
-  .service:hover .serviceTitle, .service:focus-visible .serviceTitle {
+  .service:hover .serviceTitle,
+  .service:focus-visible .serviceTitle {
     opacity: 0;
   }
 }

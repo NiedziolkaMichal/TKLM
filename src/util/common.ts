@@ -4,8 +4,8 @@ export function isInViewport(element: HTMLElement): boolean {
 }
 
 export function getRemInPx(): number {
-  const htmlElement = document.querySelector('html');
-  if(!htmlElement) {
+  const htmlElement = document.querySelector("html");
+  if (!htmlElement) {
     return 16;
   }
   const fontSize = getComputedStyle(htmlElement).fontSize;

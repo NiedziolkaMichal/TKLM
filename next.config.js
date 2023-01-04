@@ -34,8 +34,7 @@ const nextConfig = {
           {
             key: "Strict-transport-security",
             value: "max-age=63072000; includeSubDomains" /* TODO Add preload */,
-          }
-          //Content-Security-Policy: default-src 'self' 'http://blog.logrocket.com'; image-src 'https://unsplash.com'; script-src 'self' https://www.google-analytics.com; font-src 'self' 'https://fonts.googleapis.com'; 
+          },
           /* TODO cache-control, content-security-policy */
         ],
       },

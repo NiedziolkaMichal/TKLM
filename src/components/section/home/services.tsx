@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Services({}) {
   return (
-    <section id="uslugi" className={styles.section + ' ' + styles.sectionWhite}>
+    <section id="uslugi" className={styles.section + " " + styles.sectionWhite}>
       <h2>SZEROKI ZAKRES USŁUG</h2>
       <p>Specjalizujemy się w obsłudze i znamy informatyczną stronę działania: firm produkcyjnych, biur rachunkowych, biur nieruchomości, spółdzielni mieszkaniowych, organizacji pozarządowych i kancelarii prawnych.</p>
       <div className={styles.services}>
