@@ -19,7 +19,7 @@ export function Map() {
 
     lazyLoadMap(loader, mapRef);
   }, [mapRef]);
-  return <div id="map" className={styles.googleMap} ref={mapRef} />;
+  return <div id="map" className={styles.googleMap} ref={mapRef} tabIndex={-1} />;
 }
 
 function lazyLoadMap(loader: Loader, mapRef: MapRef) {
