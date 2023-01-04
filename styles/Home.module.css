@@ -567,6 +567,7 @@
   text-align: center;
   padding-bottom: 15px;
   position: relative;
+  margin-block: -1px; /* Fixes horizontal line under wave, sometimes visible on mobile */
 }
 
 .pageFooter p {
