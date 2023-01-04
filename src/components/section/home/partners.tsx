@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../../../styles/Home.module.css";
 import { InfiniteMovingSlideShow } from "../../util/infiniteMovingSlideShow";
 import LogoAsus from "/public/img/logo/logo-asus.svg";
@@ -19,10 +19,12 @@ import LogoSamsung from "/public/img/logo/logo-samsung.svg";
 import LogoTeamViewer from "/public/img/logo/logo-team-viewer.svg";
 
 export function Partners({}) {
+  const speed = useSlideShowSpeed();
+  
   return (
     <section className={styles.section + " " + styles.sectionDark}>
       <h2>NASI PARTNERZY</h2>
-      <InfiniteMovingSlideShow containerClass={styles.partnerGroup}>
+      <InfiniteMovingSlideShow containerClass={styles.partnerGroup} speed={speed}>
         <LogoAsus className={styles.partner} alt="ASUS" />
         <LogoCisco className={styles.partner} alt="Cisco" />
         <LogoDell className={styles.partner} alt="Dell" />
@@ -42,4 +44,20 @@ export function Partners({}) {
       </InfiniteMovingSlideShow>
     </section>
   );
+}
+
+function useSlideShowSpeed() {
+  const [speed, setSpeed] = useState(calculateSlideShowSpeed());
+
+  function calculateSlideShowSpeed() {
+    return window.innerWidth < 1000 ? 0.7 : 0.3
+  }
+
+  useEffect(() => {
+    const callback = () => setSpeed(calculateSlideShowSpeed());
+    addEventListener('resize', callback);
+    return () => removeEventListener('resize', callback)
+  }, [])
+  
+  return speed;
 }

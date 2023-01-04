@@ -8,21 +8,23 @@ type ContainerRef = MutableRefObject<null> & {
   lastElementIndex: number;
 };
 
-export function InfiniteMovingSlideShow({ containerClass, children }: { containerClass?: string; children: ReactNode[] }) {
+export function InfiniteMovingSlideShow({ containerClass, speed, children }: { containerClass?: string; speed: number, children: ReactNode[] }) {
   const ref: ContainerRef = useRef(null) as ContainerRef;
 
   useEffect(() => {
     ref.iteration = 0;
     ref.positions = [];
+    let active = true;
 
     const callBack = () => {
-      if (ref.current) {
-        moveChildren(ref.current, ref);
+      if (ref.current && active) {
+        moveChildren(ref.current, ref, speed);
         window.requestAnimationFrame(callBack);
       }
     };
     window.requestAnimationFrame(callBack);
-  }, [ref]);
+    return () => (active = false, undefined);
+  }, [ref, speed]);
 
   return (
     <div className={styles.infiniteMovingSlideShowParent}>
@@ -33,11 +35,11 @@ export function InfiniteMovingSlideShow({ containerClass, children }: { containe
   );
 }
 
-function moveChildren(e: HTMLElement, ref: ContainerRef) {
+function moveChildren(e: HTMLElement, ref: ContainerRef, speed: number) {
   const children = [...e.children] as HTMLElement[];
 
   initializeRef(ref, e, children);
-  updatePositions(ref, e, children);
+  updatePositions(ref, e, children, speed);
   ref.iteration++;
 }
 
@@ -59,9 +61,9 @@ function calculateGap(children: HTMLElement[]) {
   return rect2.x - (rect1.x + rect1.width);
 }
 
-function updatePositions(ref: ContainerRef, container: HTMLElement, children: HTMLElement[]) {
+function updatePositions(ref: ContainerRef, container: HTMLElement, children: HTMLElement[], speed: number) {
   for (let i = 0; i < children.length; i++) {
-    ref.positions[i] -= 0.1;
+    ref.positions[i] -= speed;
 
     if (ref.iteration % 100 === 0) {
       const rect = children[i].getBoundingClientRect();
