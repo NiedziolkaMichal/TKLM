@@ -92,9 +92,13 @@ const nextConfig = {
         headers: [
           {
             key: "Content-Security-Policy",
-            value: getCSPValue(true)
-          }
-        ]
+            value: getCSPValue(true),
+          },
+          {
+            key: "Cross-Origin-Opener-Policy",
+            value: "same-origin",
+          },
+        ],
       },
       {
         source: "/:path((?:img|font|favicon)/[\\s\\S]+|[^\/]+(?:\.svg|\.json|\.ico))",
