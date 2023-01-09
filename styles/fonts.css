@@ -1,6 +1,6 @@
 @font-face {
   src: url("/font/Montserrat-minified.woff2") format("woff"), url("/font/Montserrat-minified.ttf");
-  font-family: "Montserrat";
+  font-family: "Montserrat-mini"; /* Name "Monserrat" collides with WOT extension, creating flash of alternate font */
   font-style: normal;
   font-weight: 1 1000;
   font-stretch: normal;
