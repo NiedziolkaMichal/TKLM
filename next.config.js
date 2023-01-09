@@ -51,10 +51,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  i18n: {
-    locales: ["pl-PL"],
-    defaultLocale: "pl-PL",
-  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/i,
