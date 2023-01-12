@@ -305,12 +305,6 @@
 .service {
   position: relative;
   transition: all 0.3s ease-in-out;
-  /* Clearing button user-agent styles */
-  border: none;
-  padding: 0;
-  user-select: text;
-  cursor: unset;
-  background: 0;
 }
 .service:hover {
   transform: scale(1.03);

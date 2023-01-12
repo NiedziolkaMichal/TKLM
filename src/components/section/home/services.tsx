@@ -20,7 +20,7 @@ export default function Services({}) {
 
 function Service({ name, description, imgSrc }: { name: string; description: string; imgSrc: string }) {
   return (
-    <button className={styles.service}>
+    <div className={styles.service}>
       <Image className={styles.serviceBackground} src={imgSrc} alt="" fill={true} />
       <div className={styles.serviceForeground}>
         <h3 hidden className={styles.serviceTitle}>
@@ -28,6 +28,6 @@ function Service({ name, description, imgSrc }: { name: string; description: str
         </h3>
         <p className={styles.serviceDescription}>{description}</p>
       </div>
-    </button>
+    </div>
   );
 }
