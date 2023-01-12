@@ -98,7 +98,7 @@ const nextConfig = {
         ],
       },
       {
-        source: "/:path((?:img|font|favicon)/[\\s\\S]+|[^\/]+(?:\.svg|\.json|\.ico))",
+        source: "/:path((?:img|font|favicon)/[\\s\\S]+|[^\\/]+(?:\\.svg|\\.json|\\.ico))",
         headers: [
           {
             key: "Cache-Control",
