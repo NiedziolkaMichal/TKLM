@@ -6,10 +6,10 @@ const CSP_GENERAL = {
   "img-src": ["'self'", "data:"],
   "media-src": ["'self'"],
   "connect-src": ["'self'"],
-}
+};
 const CSP_DEV = {
-  "script-src": ["'unsafe-eval'"]
-}
+  "script-src": ["'unsafe-eval'"],
+};
 
 const CSP_GOOGLE_MAPS = {
   "script-src": ["https://*.googleapis.com"],
@@ -17,7 +17,7 @@ const CSP_GOOGLE_MAPS = {
   "font-src": ["https://fonts.gstatic.com"],
   "img-src": ["https://*.googleapis.com", "https://*.gstatic.com", "*.google.com", "*.googleusercontent.com"],
   "connect-src": ["https://*.googleapis.com", "*.google.com", "https://*.gstatic.com"],
-}
+};
 
 function getCSPValue(pageHasGoogleMaps) {
   const combinedDirectives = {};
@@ -27,21 +27,22 @@ function getCSPValue(pageHasGoogleMaps) {
       if (!combinedDirectives.hasOwnProperty(directive)) {
         combinedDirectives[directive] = new Set(sources);
       } else {
-        sources.forEach(s => combinedDirectives[directive].add(s))
+        sources.forEach((s) => combinedDirectives[directive].add(s));
       }
     }
   }
 
   addDirectives(CSP_GENERAL);
-  console.log('env', process.env.NODE_ENV)
-  if (process.env.NODE_ENV === 'development') {
+  if (process.env.NODE_ENV === "development") {
     addDirectives(CSP_DEV);
   }
   if (pageHasGoogleMaps) {
-    addDirectives(CSP_GOOGLE_MAPS)
+    addDirectives(CSP_GOOGLE_MAPS);
   }
 
-  return Object.entries(combinedDirectives).map(([k, v]) => k + ' ' + [...v].join(' ')).join(';');
+  return Object.entries(combinedDirectives)
+    .map(([k, v]) => k + " " + [...v].join(" "))
+    .join(";");
 }
 
 /** @type {import('next').NextConfig} */
@@ -101,10 +102,10 @@ const nextConfig = {
         headers: [
           {
             key: "Cache-Control",
-            value: "max-age=86400, stale-while-revalidate=604800"
-          }
-        ]
-      }
+            value: "max-age=86400, stale-while-revalidate=604800",
+          },
+        ],
+      },
     ];
   },
 };

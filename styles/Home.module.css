@@ -5,7 +5,7 @@
   display: flow-root; /* To collapse vertical margin */
   margin-top: -1px; /* Fixes horizontal line under wave, sometimes visible on mobile */
   margin-bottom: -1px;
-  
+
   line-height: 1.5;
 }
 .sectionWithoutTitle {
