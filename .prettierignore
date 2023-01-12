@@ -3,3 +3,4 @@ public
 yarn.lock
 .*
 out
+*.log
