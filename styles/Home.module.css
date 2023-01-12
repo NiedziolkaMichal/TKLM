@@ -3,8 +3,9 @@
   text-align: center;
   position: relative;
   display: flow-root; /* To collapse vertical margin */
-  margin-block: -1px; /* Fixes horizontal line under wave, sometimes visible on mobile */
-
+  margin-top: -1px; /* Fixes horizontal line under wave, sometimes visible on mobile */
+  margin-bottom: -1px;
+  
   line-height: 1.5;
 }
 .sectionWithoutTitle {
@@ -382,7 +383,8 @@
 
 /* Microsoft Support */
 .productLogoGroup {
-  margin-block: 3rem 1rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -434,7 +436,8 @@
 
 /* Partners */
 .partnerGroup {
-  margin-block: 0 70px;
+  margin-top: 0;
+  margin-bottom: 70px;
   display: flex;
   justify-content: flex-start;
   gap: 30px;
@@ -570,7 +573,8 @@
   text-align: center;
   padding-bottom: 15px;
   position: relative;
-  margin-block: -1px; /* Fixes horizontal line under wave, sometimes visible on mobile */
+  margin-top: -1px; /* Fixes horizontal line under wave, sometimes visible on mobile */
+  margin-bottom: -1px;
 }
 
 .pageFooter p {
