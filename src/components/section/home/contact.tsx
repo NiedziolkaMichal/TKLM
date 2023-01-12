@@ -7,18 +7,20 @@ export function Contact({}) {
     <section id="kontakt" className={styles.section + " " + styles.contactBox}>
       <h2>KONTAKT</h2>
       <div className={styles.contactColumns}>
-        <address>
+        <div>
           <h3>MATEUSZ MOREK</h3>
-          <a className={styles.contactLink} href="tel:+48793937760">
-            <IconPhone />
-            +48 793 937 760
-          </a>
-          <a className={styles.contactLink} href="mailto:m.morek@tklm.pl">
-            <IconEmail />
-            m.morek@tklm.pl
-          </a>
-          <br />
-        </address>
+          <address>
+            <a className={styles.contactLink} href="tel:+48793937760">
+              <IconPhone />
+              +48 793 937 760
+            </a>
+            <a className={styles.contactLink} href="mailto:m.morek@tklm.pl">
+              <IconEmail />
+              m.morek@tklm.pl
+            </a>
+            <br />
+          </address>
+        </div>
         <div className={styles.openingHours}>
           <h3>GODZINY OTWARCIA</h3>
           <p>Poniedziałek - Piątek</p>
