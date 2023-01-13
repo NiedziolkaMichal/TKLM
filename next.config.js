@@ -18,6 +18,9 @@ const CSP_GOOGLE_MAPS = {
   "img-src": ["https://*.googleapis.com", "https://*.gstatic.com", "*.google.com", "*.googleusercontent.com"],
   "connect-src": ["https://*.googleapis.com", "*.google.com", "https://*.gstatic.com"],
 };
+const CSP_GOOGLE_ANALYTICS = {
+  "script-src": ["https://www.googletagmanager.com"],
+};
 
 function getCSPValue(pageHasGoogleMaps) {
   const combinedDirectives = {};
@@ -39,6 +42,7 @@ function getCSPValue(pageHasGoogleMaps) {
   if (pageHasGoogleMaps) {
     addDirectives(CSP_GOOGLE_MAPS);
   }
+  addDirectives(CSP_GOOGLE_ANALYTICS);
 
   return Object.entries(combinedDirectives)
     .map(([k, v]) => k + " " + [...v].join(" "))
