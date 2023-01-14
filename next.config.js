@@ -56,9 +56,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  experimental: {
-    runtime: "experimental-edge",
-  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/i,
@@ -110,6 +107,15 @@ const nextConfig = {
           {
             key: "Cache-Control",
             value: "max-age=86400, stale-while-revalidate=604800",
+          },
+        ],
+      },
+      {
+        source: "/_next/static/:any*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "max-age=31536000, immutable",
           },
         ],
       },
