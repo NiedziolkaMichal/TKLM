@@ -20,6 +20,7 @@ const CSP_GOOGLE_MAPS = {
 };
 const CSP_GOOGLE_ANALYTICS = {
   "script-src": ["https://www.googletagmanager.com"],
+  "connect-src": ["https://*.google-analytics.com"],
 };
 
 function getCSPValue(pageHasGoogleMaps) {
