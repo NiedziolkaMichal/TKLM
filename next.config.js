@@ -85,7 +85,7 @@ const nextConfig = {
           },
           {
             key: "Strict-transport-security",
-            value: "max-age=63072000; includeSubDomains" /* TODO Add preload */,
+            value: "max-age=63072000; includeSubDomains; preload",
           },
         ],
       },
