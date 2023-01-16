@@ -23,7 +23,7 @@ function Service({ name, description, imgSrcWebP, imgSrc }: { name: string; desc
     <div className={styles.service}>
       <picture>
         <source srcSet={imgSrcWebP} type="image/webp" />
-        <Image className={styles.serviceBackground} src={imgSrc} alt="" fill={true} unoptimized={true} />
+        <img className={styles.serviceBackground} src={imgSrc} alt="" />
       </picture>
       <div className={styles.serviceForeground}>
         <h3 hidden className={styles.serviceTitle}>

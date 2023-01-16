@@ -312,6 +312,10 @@
 .serviceBackground {
   border-radius: 20px;
   object-fit: cover;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  inset: 0;
 }
 .serviceForeground {
   z-index: 1;
