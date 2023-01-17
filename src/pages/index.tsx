@@ -10,13 +10,15 @@ import { Map } from "../components/util/googleMap";
 import { Wave } from "../components/util/sectionWave";
 import { Contact } from "../components/section/home/contact";
 import { Footer } from "../components/section/footer";
+import { PageMeta } from "../components/metaTags";
+
+export const indexTitle = "TKLM - Kompleksowe wsparcie informatyczne";
+export const indexDescription = "Firma z Krakowa oferująca usługi w zakresie oprogramowania, sieci komputerowych, administracji serwerami, monitoringu oraz sprzętu informatycznego.";
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>TKLM - Kompleksowe wsparcie informatyczne</title>
-      </Head>
+      <PageMeta title={indexTitle} description={indexDescription} />
       <Header />
       <main className={styles.main}>
         <Hero />
