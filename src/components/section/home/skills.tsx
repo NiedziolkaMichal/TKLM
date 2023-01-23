@@ -1,7 +1,7 @@
 import styles from "../../../../styles/Home.module.css";
 import { ReactNode } from "react";
 
-export function Skills({}) {
+export function Skills() {
   return (
     <section className={styles.section + " " + styles.sectionGrey}>
       <div className={styles.cardGroup}>

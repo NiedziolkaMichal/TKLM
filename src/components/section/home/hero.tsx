@@ -2,7 +2,7 @@ import styles from "../../../../styles/Home.module.css";
 import { FloatingStars } from "../../util/floatingStars";
 import Head from "next/head";
 
-export default function Hero({}) {
+export default function Hero() {
   return (
     <>
       <Head>

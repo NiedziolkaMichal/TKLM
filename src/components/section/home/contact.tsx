@@ -2,7 +2,7 @@ import styles from "../../../../styles/Home.module.css";
 import IconPhone from "/public/img/icon/icon-phone.svg";
 import IconEmail from "/public/img/icon/icon-email.svg";
 
-export function Contact({}) {
+export function Contact() {
   return (
     <section id="kontakt" className={styles.section + " " + styles.contactBox}>
       <h2>KONTAKT</h2>

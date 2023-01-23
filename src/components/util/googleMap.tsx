@@ -5,6 +5,8 @@ import { getRemInPx, isInViewport } from "../../util/common";
 import HomeMapStyle from "../../../public/homeMapStyle.json";
 import { requestIdleCallback as _requestIdleCallback } from "next/dist/client/request-idle-callback";
 
+/* global google */
+
 type MapRef = RefObject<HTMLDivElement> & { loaded?: boolean };
 
 export function Map() {

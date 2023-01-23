@@ -17,7 +17,7 @@ import LogoNetia from "/public/img/logo/logo-netia.svg";
 import LogoSamsung from "/public/img/logo/logo-samsung.svg";
 import LogoTeamViewer from "/public/img/logo/logo-team-viewer.svg";
 
-export function Partners({}) {
+export function Partners() {
   const speed = useSlideShowSpeed();
 
   return (

@@ -6,7 +6,7 @@ import LogoTeams from "/public/img/logo/logo-teams.svg";
 import LogoSharePoint from "/public/img/logo/logo-sharepoint.svg";
 import LogoAzureActiveDirectory from "/public/img/logo/logo-azure-active-directory.svg";
 
-export function MicrosoftSupport({}) {
+export function MicrosoftSupport() {
   return (
     <section className={styles.section + " " + styles.sectionYellow}>
       <h2>PEŁNE WSPARCIE DLA OPROGRAMOWANIA MICROSOFT</h2>

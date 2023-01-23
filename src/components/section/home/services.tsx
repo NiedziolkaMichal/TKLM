@@ -1,7 +1,6 @@
 import styles from "../../../../styles/Home.module.css";
-import Image from "next/image";
 
-export default function Services({}) {
+export default function Services() {
   return (
     <section id="uslugi" className={styles.section + " " + styles.sectionWhite}>
       <h2>SZEROKI ZAKRES USŁUG</h2>

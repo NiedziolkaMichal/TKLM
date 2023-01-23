@@ -1,4 +1,3 @@
-import Head from "next/head";
 import styles from "../../styles/Home.module.css";
 import Hero from "../components/section/home/hero";
 import Header from "../components/section/header";

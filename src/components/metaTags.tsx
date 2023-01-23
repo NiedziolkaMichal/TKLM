@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export function SharedHead({}) {
+export function SharedHead() {
   return (
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,12 +17,12 @@ export function SharedHead({}) {
 
 export function PageMeta({ title, socialTitle = title, description }: { title: string; socialTitle?: string; description: string }) {
   return (
-      <Head>
-        <title>{title}</title>
-        <meta key="og:title" property="og:title" content={socialTitle} />
-        <meta key="twitter:title" name="twitter:title" content={socialTitle} />
-        <meta key="description" name="description" content={description} />
-        <meta key="twitter:description" name="twitter:description" content={description} />
-      </Head>
+    <Head>
+      <title>{title}</title>
+      <meta key="og:title" property="og:title" content={socialTitle} />
+      <meta key="twitter:title" name="twitter:title" content={socialTitle} />
+      <meta key="description" name="description" content={description} />
+      <meta key="twitter:description" name="twitter:description" content={description} />
+    </Head>
   );
 }

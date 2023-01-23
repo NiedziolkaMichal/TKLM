@@ -1,3 +1,5 @@
+import React from "react";
+
 export function navigateToFragment(e: React.MouseEvent<HTMLAnchorElement>) {
   const href = e.currentTarget.href;
   if (href.endsWith("#")) {

@@ -2,7 +2,7 @@ import styles from "../../../styles/Home.module.css";
 import Logo from "../../../public/logo.svg";
 import { navigateToFragment } from "../../util/navigate";
 
-export default function Header({}) {
+export default function Header() {
   return (
     <section className={styles.header}>
       <a className={styles.headerLogo} href={""}>
