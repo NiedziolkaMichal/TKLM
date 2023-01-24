@@ -8,8 +8,9 @@ export function GoogleAnalytics() {
 }
 
 declare global {
-  // eslint-disable-next-line no-unused-vars
-  var dataLayer: unknown[];
+  interface Window {
+    dataLayer: unknown[];
+  }
 }
 
 function useInitializeGTag() {

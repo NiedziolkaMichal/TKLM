@@ -7,7 +7,7 @@ interface WaveProps {
 }
 
 export function Wave({ previousSectionClass, nextSectionClass, styleIndex }: WaveProps) {
-  let styleClass = getWaveClass(styleIndex);
+  const styleClass = getWaveClass(styleIndex);
 
   if (nextSectionClass && previousSectionClass)
     return (
