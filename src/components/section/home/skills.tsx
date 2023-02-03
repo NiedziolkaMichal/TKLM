@@ -21,7 +21,7 @@ export function Skills() {
 
 function Mp4GIF({ src, width, height, className }: { src: string; width: number; height: number; className?: string }) {
   return (
-    <video className={className} width={width} height={height} autoPlay={true} loop={true} muted={true} playsInline={true} tabIndex={-1}>
+    <video className={className} width={width} height={height} autoPlay={true} loop={true} muted={true} playsInline={true} tabIndex={-1} role="presentation">
       <source src={src} type="video/mp4" />
     </video>
   );
