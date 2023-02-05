@@ -1,28 +1,18 @@
 import styles from "../../../../styles/Home.module.css";
-import LogoWord from "/public/img/logo/logo-word.svg";
-import LogoExcel from "/public/img/logo/logo-excel.svg";
-import LogoPowerPoint from "/public/img/logo/logo-powerpoint.svg";
-import LogoTeams from "/public/img/logo/logo-teams.svg";
-import LogoSharePoint from "/public/img/logo/logo-sharepoint.svg";
-import LogoAzureActiveDirectory from "/public/img/logo/logo-azure-active-directory.svg";
+import { Document } from "@contentful/rich-text-types/dist/types/types";
+import { LogoEntry, renderRichTextParagraph } from "../../../cms/cmsUtil";
 
-export function MicrosoftSupport() {
+export function MicrosoftSupport({ heading, paragraph, products }: { heading: Document; paragraph: Document; products: LogoEntry[] }) {
   return (
     <section className={styles.section + " " + styles.sectionYellow}>
-      <h2>PEŁNE WSPARCIE DLA OPROGRAMOWANIA MICROSOFT</h2>
-      <p>
-        Specjalizujemy się w instalacji, konfiguracji i szkoleniem użytkowników z obsługi <b>Microsoft Word</b>, <b>Excel</b>, <b>PowerPoint</b>, <b>Teams</b>
-      </p>
-      <p>
-        Tworzymy i utrzymujemy intranet dla firm w oparciu o <b>SharePoint Online</b>, a także zarządzamy <b>Azure Active Directory</b>.
-      </p>
+      {renderRichTextParagraph(heading, (children) => (
+        <h2>{children}</h2>
+      ))}
+      {renderRichTextParagraph(paragraph)}
       <div className={styles.productLogoGroup}>
-        <LogoWord className={styles.productLogo} role="presentation" />
-        <LogoExcel className={styles.productLogo} role="presentation" />
-        <LogoPowerPoint className={styles.productLogo} role="presentation" />
-        <LogoTeams className={styles.productLogo} role="presentation" />
-        <LogoSharePoint className={styles.productLogo} role="presentation" />
-        <LogoAzureActiveDirectory className={styles.productLogo} role="presentation" />
+        {products.map((logo, i) => (
+          <img key={i} src={logo.fields.url} className={styles.productLogo} alt={logo.fields.alt || ""} />
+        ))}
       </div>
     </section>
   );

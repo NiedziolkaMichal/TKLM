@@ -1,5 +1,8 @@
 import React from "react";
 
+/**
+ * Navigate to element, without setting URL fragment in the current address
+ */
 export function navigateToFragment(e: React.MouseEvent<HTMLAnchorElement>) {
   const href = e.currentTarget.href;
   if (href.endsWith("#")) {

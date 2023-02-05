@@ -1,34 +1,35 @@
 import styles from "../../../../styles/Home.module.css";
+import { Document } from "@contentful/rich-text-types/dist/types/types";
+import { renderRichTextParagraph } from "../../../cms/cmsUtil";
+import { ServiceEntry } from "../../../pages";
+import { ReactNode } from "react";
 
-export default function Services() {
+export default function Services({ heading, paragraph, services }: { heading: Document; paragraph: Document; services: ServiceEntry[] }) {
   return (
     <section id="uslugi" className={styles.section + " " + styles.sectionWhite}>
-      <h2>SZEROKI ZAKRES USŁUG</h2>
-      <p>Specjalizujemy się w obsłudze i znamy informatyczną stronę działania: firm produkcyjnych, biur rachunkowych, biur nieruchomości, spółdzielni mieszkaniowych, organizacji pozarządowych i kancelarii prawnych.</p>
-      <div className={styles.services}>
-        <Service name="Sieci Komputerowe" description="Specjalizujemy się w projektowaniu, budowie i administracji sieci komputerowych. Budujemy rozwiązania sieciowe w oparciu o infrastrukturę kablową, światłowodową i bezprzewodową." imgSrcWebP="/img/services/network.webp" imgSrc="/img/services/network.jpg" />
-        <Service name="Wsparcie" description="Pomagamy w przygotowaniu stanowisk do pracy zdalnej. Świadczymy pełne wsparcie dla komputerów i serwerów opartych na systemach: Windows, Linux i MacOs." imgSrcWebP="/img/services/support.webp" imgSrc="/img/services/support.jpg" />
-        <Service name="Sprzęt" description="Dostarczamy sprzęt komputerowy i oprogramowanie. Dostarczamy i montujemy urządzenia sieciowe: kamery, alarmy, drukarki, serwery danych i inne." imgSrcWebP="/img/services/hardware.webp" imgSrc="/img/services/hardware.jpg" />
-        <Service name="Oprogramowanie" description="Przeprowadzamy kompleksową instalację oprogramowania komputerowego, w tym programów biurowych, księgowych oraz zabezpieczamy sieci i komputery – zapewniając ich utrzymanie i aktualizację." imgSrcWebP="/img/services/software.webp" imgSrc="/img/services/software.jpg" />
-        <Service name="Monitoring" description="Dostarczamy i montujemy urządzenia sieciowe: kamery, alarmy, drukarki, serwery danych i inne." imgSrcWebP="/img/services/surveillance.webp" imgSrc="/img/services/surveillance.jpg" />
-        <Service name="Bezpieczeństwo" description="Przeprowadzamy audyt bezpieczeństwa i potrzeb informatycznych organizacji. W sposób bezpieczny i poufny zabezpieczamy dane." imgSrcWebP="/img/services/security.webp" imgSrc="/img/services/security.jpg" />
-      </div>
+      {renderRichTextParagraph(heading, (children) => (
+        <h2>{children}</h2>
+      ))}
+      {renderRichTextParagraph(paragraph)}
+      <div className={styles.services}>{services.map(serviceAdapter)}</div>
     </section>
   );
 }
 
-function Service({ name, description, imgSrcWebP, imgSrc }: { name: string; description: string; imgSrcWebP: string; imgSrc: string }) {
+function serviceAdapter(service: ServiceEntry) {
+  const description = renderRichTextParagraph(service.fields.description, (children) => <p className={styles.serviceDescription}>{children}</p>);
+  return <Service key={service.fields.heading} name={service.fields.heading} description={description} imgSrc={service.fields.backgroundUrl} />;
+}
+
+function Service({ name, description, imgSrc }: { name: string; description: ReactNode; imgSrcWebP?: string; imgSrc: string }) {
   return (
     <div className={styles.service}>
-      <picture>
-        <source srcSet={imgSrcWebP} type="image/webp" />
-        <img className={styles.serviceBackground} src={imgSrc} alt="" />
-      </picture>
+      <img className={styles.serviceBackground} src={imgSrc} alt="" />
       <div className={styles.serviceForeground}>
         <h3 hidden className={styles.serviceTitle}>
           {name.toUpperCase()}
         </h3>
-        <p className={styles.serviceDescription}>{description}</p>
+        {description}
       </div>
     </div>
   );

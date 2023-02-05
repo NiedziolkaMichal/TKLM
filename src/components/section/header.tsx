@@ -1,8 +1,19 @@
 import styles from "../../../styles/Home.module.css";
 import Logo from "../../../public/logo.svg";
 import { navigateToFragment } from "../../util/navigate";
+import { getCMSEntry } from "../../cms/cmsData";
 
-export default function Header() {
+export interface HeaderEntry {
+  fields: {
+    teamViewerUrl: string;
+  };
+}
+
+export async function getHeaderEntry() {
+  return (await getCMSEntry(process.env.CONTENTFUL_HEADER_ENTRY_ID)) as HeaderEntry;
+}
+
+export default function Header({ cmsEntry }: { cmsEntry: HeaderEntry }) {
   return (
     <section className={styles.header}>
       <a className={styles.headerLogo} href={""}>
@@ -15,7 +26,7 @@ export default function Header() {
         <a className={styles.navBtn} href="#kontakt" onClick={navigateToFragment}>
           KONTAKT
         </a>
-        <a className={styles.navBtn + " " + styles.navBtnSpecial} rel="noopener" href="https://get.teamviewer.com/6wgz2u4">
+        <a className={styles.navBtn + " " + styles.navBtnSpecial} rel="noopener" href={cmsEntry.fields.teamViewerUrl}>
           ZDALNA POMOC
         </a>
       </nav>

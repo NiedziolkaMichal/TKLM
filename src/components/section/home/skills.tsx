@@ -1,19 +1,17 @@
 import styles from "../../../../styles/Home.module.css";
 import { ReactNode } from "react";
+import { SkillEntry } from "../../../pages";
+import { renderRichTextParagraph } from "../../../cms/cmsUtil";
 
-export function Skills() {
+export function Skills({ skills }: { skills: SkillEntry[] }) {
   return (
     <section className={styles.section + " " + styles.sectionGrey}>
       <div className={styles.cardGroup}>
-        <Card paragraph="Pracujemy w językach: polskim, angielskim i niemieckim.">
-          <Mp4GIF src="/img/cards/icon-laptop-meeting.mp4" width={275} height={152} className={styles.cardImage} />
-        </Card>
-        <Card paragraph="Posiadamy wymagane przez prawo uprawnienia w zakresie prac z urządzeniami elektrycznymi do 1kV.">
-          <Mp4GIF src="/img/cards/icon-writing-code.mp4" width={240} height={152} className={styles.cardImage} />
-        </Card>
-        <Card paragraph="Gwarantujemy pełną poufność i najwyższe standardy wsparcia informatycznego, dedykowanego pod zgłaszane potrzeby.">
-          <Mp4GIF src="/img/cards/icon-explaining.mp4" width={351} height={152} className={styles.cardImage} />
-        </Card>
+        {skills.map((s, i) => (
+          <Card key={i} paragraph={renderRichTextParagraph(s.fields.paragraph)}>
+            <Mp4GIF src={s.fields.mp4Url} width={s.fields.mp4width} height={s.fields.mp4height} className={styles.cardImage} />
+          </Card>
+        ))}
       </div>
     </section>
   );
@@ -27,11 +25,11 @@ function Mp4GIF({ src, width, height, className }: { src: string; width: number;
   );
 }
 
-function Card({ paragraph, children }: { paragraph: string; children: ReactNode }) {
+function Card({ paragraph, children }: { paragraph: ReactNode; children: ReactNode }) {
   return (
     <div className={styles.card}>
       {children}
-      <p>{paragraph}</p>
+      {paragraph}
     </div>
   );
 }

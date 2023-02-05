@@ -9,7 +9,7 @@ import { requestIdleCallback as _requestIdleCallback } from "next/dist/client/re
 
 type MapRef = RefObject<HTMLDivElement> & { loaded?: boolean };
 
-export function Map() {
+export function Map({ pinTitle }: { pinTitle: string }) {
   const mapRef = useRef(null) as MapRef;
   useEffect(() => {
     if (!process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY) return;
@@ -19,21 +19,21 @@ export function Map() {
       version: "weekly",
     });
 
-    lazyLoadMap(loader, mapRef);
-  }, [mapRef]);
+    lazyLoadMap(loader, mapRef, pinTitle);
+  }, [mapRef, pinTitle]);
   return <div id="map" className={styles.googleMap} ref={mapRef} tabIndex={-1} />;
 }
 
-function lazyLoadMap(loader: Loader, mapRef: MapRef) {
+function lazyLoadMap(loader: Loader, mapRef: MapRef, pinTitle: string) {
   const element = mapRef.current;
   if (element && isInViewport(element)) {
-    loadMap(loader, mapRef);
+    loadMap(loader, mapRef, pinTitle);
   } else {
-    _requestIdleCallback(() => loadMap(loader, mapRef));
+    _requestIdleCallback(() => loadMap(loader, mapRef, pinTitle));
   }
 }
 
-function loadMap(loader: Loader, mapRef: MapRef) {
+function loadMap(loader: Loader, mapRef: MapRef, pinTitle: string) {
   if (mapRef.loaded) return;
 
   loader.load().then(() => {
@@ -51,7 +51,7 @@ function loadMap(loader: Loader, mapRef: MapRef) {
     });
     const marker = new google.maps.Marker({
       position: getMarkerLocation(),
-      title: "TKLM",
+      title: pinTitle,
     });
 
     marker.setMap(map);
