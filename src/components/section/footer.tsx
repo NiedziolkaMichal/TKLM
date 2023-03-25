@@ -1,4 +1,5 @@
-import styles from "../../../styles/Home.module.css";
+import styles from "../../../styles/section/footer.module.css";
+import sectionStyles from "../../../styles/section/section.module.css";
 import IconScrollUp from "/public/img/icon/icon-scroll-up.svg";
 import { navigateToFragment } from "../../util/navigate";
 import { renderRichTextParagraph } from "../../cms/cmsUtil";
@@ -6,7 +7,7 @@ import { Document } from "@contentful/rich-text-types/dist/types/types";
 
 export function Footer({ content }: { content: Document }) {
   return (
-    <footer className={styles.sectionFooterBackground + " " + styles.pageFooter}>
+    <footer className={sectionStyles.sectionFooterBackground + " " + styles.pageFooter}>
       <ScrollTop />
       {renderRichTextParagraph(content)}
     </footer>

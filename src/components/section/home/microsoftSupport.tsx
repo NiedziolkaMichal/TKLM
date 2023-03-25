@@ -1,10 +1,11 @@
-import styles from "../../../../styles/Home.module.css";
+import styles from "../../../../styles/section/home/microsoftSupport.module.css";
+import sectionStyles from "../../../../styles/section/section.module.css";
 import { Document } from "@contentful/rich-text-types/dist/types/types";
 import { LogoEntry, renderRichTextParagraph } from "../../../cms/cmsUtil";
 
 export function MicrosoftSupport({ heading, paragraph, products }: { heading: Document; paragraph: Document; products: LogoEntry[] }) {
   return (
-    <section className={styles.section + " " + styles.sectionYellow}>
+    <section className={sectionStyles.section + " " + sectionStyles.sectionYellow}>
       {renderRichTextParagraph(heading, (children) => (
         <h2>{children}</h2>
       ))}

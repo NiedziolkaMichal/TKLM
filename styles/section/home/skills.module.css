@@ -1,0 +1,31 @@
+.cardGroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 75px 15px 0;
+}
+@media (min-width: 800px) {
+  .cardGroup {
+    margin-bottom: 40px;
+  }
+}
+
+.card {
+  box-shadow: 0 3px 10px #3030301a;
+  border-radius: 20px;
+  flex: 0 1 390px;
+  font-size: 1.1rem;
+  padding: 1.2rem;
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+}
+.card:hover {
+  box-shadow: 0 3px 10px #3030308a;
+  transform: scale(1.03);
+}
+
+.cardImage {
+  max-width: 100%;
+  height: auto;
+}

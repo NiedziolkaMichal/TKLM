@@ -1,4 +1,4 @@
-import styles from "../../../styles/Home.module.css";
+import styles from "../../../styles/util/infiniteMovingSlideShow.module.css";
 import { MutableRefObject, ReactNode, useEffect, useRef } from "react";
 
 type ContainerRef = MutableRefObject<null> & {

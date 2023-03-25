@@ -1,11 +1,12 @@
-import styles from "../../../../styles/Home.module.css";
+import styles from "../../../../styles/section/home/skills.module.css";
+import sectionStyles from "../../../../styles/section/section.module.css";
 import { ReactNode } from "react";
 import { SkillEntry } from "../../../pages";
 import { renderRichTextParagraph } from "../../../cms/cmsUtil";
 
 export function Skills({ skills }: { skills: SkillEntry[] }) {
   return (
-    <section className={styles.section + " " + styles.sectionGrey}>
+    <section className={sectionStyles.section + " " + sectionStyles.sectionGrey}>
       <div className={styles.cardGroup}>
         {skills.map((s, i) => (
           <Card key={i} paragraph={renderRichTextParagraph(s.fields.paragraph)}>

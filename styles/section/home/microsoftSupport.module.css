@@ -1,0 +1,18 @@
+.productLogoGroup {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.productLogo {
+  filter: drop-shadow(5px 5px 5px #252525);
+  width: auto;
+  height: 6rem;
+  transition: all 0.3s ease-in-out;
+}
+.productLogo:hover {
+  filter: drop-shadow(5px 5px 5px #252525) brightness(1.2);
+  transform: scale(1.1);
+}

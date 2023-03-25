@@ -1,0 +1,46 @@
+.heroSection {
+  padding-bottom: 10%;
+  color: var(--color-secondary);
+}
+
+.heroHeading {
+  margin-top: 175px;
+  margin-bottom: 35px;
+
+  font-size: min(10vw, 5.7rem);
+  position: relative;
+  z-index: 2;
+  animation: fromTransparent 2s ease-in-out;
+}
+@keyframes fromTransparent {
+  from {
+    opacity: 0;
+  }
+}
+
+.heroFancyText {
+  background-clip: text;
+  background-image: repeating-linear-gradient(126deg, #f1d409, #fe6c0f, #f1d409);
+  background-size: 200%;
+  color: var(--color-primary);
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: calc(1em / 16);
+  animation: heroFanyTextMovement 5s linear infinite;
+}
+@keyframes heroFanyTextMovement {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 200%;
+  }
+}
+.heroP {
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+  animation: fromTransparent 2s 1s ease-in-out backwards;
+}
+.heroP > b {
+  color: var(--color-special);
+}

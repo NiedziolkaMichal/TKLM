@@ -1,4 +1,4 @@
-import styles from "../../styles/Home.module.css";
+import styles from "../../styles/section/section.module.css";
 import Hero from "../components/section/home/hero";
 import Header, { getHeaderEntry, HeaderEntry } from "../components/section/header";
 import Services from "../components/section/home/services";

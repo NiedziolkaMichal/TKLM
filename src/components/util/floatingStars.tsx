@@ -1,4 +1,4 @@
-import styles from "../../../styles/Home.module.css";
+import styles from "../../../styles/util/floatingStars.module.css";
 
 export function FloatingStars() {
   return (

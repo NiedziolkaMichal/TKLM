@@ -1,0 +1,37 @@
+.wave {
+  height: 100px;
+  width: 100%;
+  mask: top / 100% 100px no-repeat;
+  position: relative;
+  z-index: 1; /* Map can be placed in transparent area */
+  user-select: none;
+  pointer-events: none;
+}
+
+.waveImage1 {
+  --wave-image-1: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 92" preserveAspectRatio="none"><path d="M0,67c0,0,263.6,22.9,599.7,23.4S1013.9,65,1344,65s576,25.6,576,25.6V92H0V67z"/></svg>');
+  mask-image: var(--wave-image-1);
+}
+.waveImage2 {
+  mask-image: url("/img/wave/wave-7.svg");
+}
+.waveImage3 {
+  mask-image: url("/img/wave/wave-8.svg");
+}
+.waveImage4 {
+  mask-image: url("/img/wave/wave-9.svg");
+}
+@media (min-width: 800px) {
+  .waveImage1 {
+    --wave-image-1: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1920 92"><path d="M1990-120.723s263.584,89.886,599.672,90.384,414.6-88.391,744.678-88.391S3910-30.075,3910-30.075v1.352H1990Z" transform="translate(-1990 120.723)"/></svg>');
+  }
+  .waveImage2 {
+    mask-image: url("/img/wave/wave-2.svg");
+  }
+  .waveImage3 {
+    mask-image: url("/img/wave/wave-3.svg");
+  }
+  .waveImage4 {
+    mask-image: url("/img/wave/wave-4.svg");
+  }
+}

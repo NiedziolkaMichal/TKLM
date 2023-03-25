@@ -1,0 +1,23 @@
+.partnerGroup {
+  margin-top: 0;
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+}
+.partner {
+  filter: drop-shadow(5px 5px 5px #252525);
+  width: auto;
+  height: 40px;
+  transition: filter 0.3s ease-in-out;
+  will-change: transform;
+  overflow: visible;
+}
+.partner:hover {
+  filter: drop-shadow(5px 5px 5px #252525) brightness(1.2);
+}
+@media (min-width: 1200px) {
+  .partner {
+    height: 50px;
+  }
+}

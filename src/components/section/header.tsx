@@ -1,4 +1,4 @@
-import styles from "../../../styles/Home.module.css";
+import styles from "../../../styles/section/header.module.css";
 import Logo from "../../../public/logo.svg";
 import { navigateToFragment } from "../../util/navigate";
 import { getCMSEntry } from "../../cms/cmsData";

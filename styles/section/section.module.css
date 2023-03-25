@@ -1,0 +1,83 @@
+.section {
+  text-align: center;
+  position: relative;
+  display: flow-root; /* To collapse vertical margin */
+  margin-top: -1px; /* Fixes horizontal line under wave, sometimes visible on mobile */
+  margin-bottom: -1px;
+
+  line-height: 1.5;
+}
+.sectionWithoutTitle {
+  padding-top: 3rem;
+}
+
+.section > h2,
+.section > p {
+  margin: 0 5%;
+}
+
+.section > h2 {
+  font-size: 1.5rem;
+  margin: 50px 0 30px;
+}
+
+.section > p {
+  font-size: 1.2rem;
+}
+
+@media (min-width: 24rem) {
+  /* 384 px */
+  .section > h2 {
+    font-size: 2rem;
+  }
+  .section > p {
+    font-size: 1.5rem;
+  }
+}
+
+.sectionWhite {
+  background: var(--color-secondary);
+}
+.sectionDarkPixels {
+  background: url("/img/hero-background-dark.jpg");
+}
+.sectionYellow {
+  background: repeating-linear-gradient(90deg, #e7a32c, 25%, #ffd54b, 75%, #e7a32c);
+}
+.sectionYellow b {
+  color: var(--color-primary);
+}
+.sectionGrey {
+  background-color: #f7f7f7;
+}
+.sectionDark {
+  background: linear-gradient(to right, #202020, 20%, var(--color-primary), 80%, #202020);
+  color: var(--color-special);
+}
+.sectionFooterBackground {
+  background: linear-gradient(to right, #202020, 20%, var(--color-primary), 80%, #202020);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .sectionYellow {
+    animation: movingHorizontalBackground 40s linear infinite;
+  }
+  .sectionDark,
+  .sectionFooterBackground {
+    animation: movingHorizontalBackground 30s linear infinite;
+  }
+}
+@keyframes movingHorizontalBackground {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 100%;
+  }
+}
+
+.mapSection {
+  display: flow-root;
+  position: relative;
+  margin-top: -100px;
+  margin-bottom: -100px;
+}

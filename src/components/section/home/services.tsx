@@ -1,4 +1,5 @@
-import styles from "../../../../styles/Home.module.css";
+import styles from "../../../../styles/section/home/services.module.css";
+import sectionStyles from "../../../../styles/section/section.module.css";
 import { Document } from "@contentful/rich-text-types/dist/types/types";
 import { renderRichTextParagraph } from "../../../cms/cmsUtil";
 import { ServiceEntry } from "../../../pages";
@@ -6,7 +7,7 @@ import { ReactNode } from "react";
 
 export default function Services({ heading, paragraph, services }: { heading: Document; paragraph: Document; services: ServiceEntry[] }) {
   return (
-    <section id="uslugi" className={styles.section + " " + styles.sectionWhite}>
+    <section id="uslugi" className={sectionStyles.section + " " + sectionStyles.sectionWhite}>
       {renderRichTextParagraph(heading, (children) => (
         <h2>{children}</h2>
       ))}

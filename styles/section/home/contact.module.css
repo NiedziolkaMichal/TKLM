@@ -1,0 +1,90 @@
+.contactBox {
+  z-index: 2;
+  background: linear-gradient(90deg, #780b1f96, #58244896, #3f256896);
+  box-shadow: 0 0 10px #0000008f;
+  margin: 300px 10px 100px;
+  width: auto;
+  backdrop-filter: blur(4px) grayscale(1);
+  border-radius: 20px;
+  color: var(--color-secondary);
+  padding: 20px 10px;
+  transition: all 0.2s ease-in-out;
+}
+.contactBox:hover {
+  box-shadow: 0 0 15px #000000de;
+}
+@media (min-width: 364px) {
+  .contactBox {
+    padding: 20px 40px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+@media (min-width: calc(43rem + 110px)) {
+  /* Matches value in googleMap.tsx */
+  .contactBox {
+    margin-left: auto;
+    width: max-content;
+    max-width: calc(100% - 20px);
+    margin-top: 160px;
+    transform: none;
+  }
+}
+@media (min-width: 1400px) {
+  .contactBox {
+    min-width: 650px;
+  }
+}
+
+.contactBox h2 {
+  color: var(--color-special);
+  margin: 20px 0;
+}
+
+.contactBox h3 {
+  margin: 0 0 10px 0;
+  font-weight: 600;
+}
+
+.contactColumns {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  justify-content: space-around;
+}
+.contactColumns > * {
+  flex: 0 1 auto;
+}
+
+.contactBox .contactLink {
+  display: block;
+  line-height: 2;
+  width: max-content;
+  margin: auto;
+}
+
+.openingHours p {
+  text-align: center;
+  margin: 0;
+  line-height: 2;
+}
+
+.contactLink {
+  transition: color 0.2s ease-in-out;
+}
+.contactLink:hover {
+  color: var(--color-special);
+}
+
+.contactLink svg {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  transform: translateY(5px);
+  transition: filter 0.2s ease-in-out;
+  user-select: none;
+  margin-right: 5px;
+}
+.contactLink:hover svg {
+  filter: brightness(1.3);
+}

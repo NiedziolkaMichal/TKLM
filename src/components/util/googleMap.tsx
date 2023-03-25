@@ -1,4 +1,4 @@
-import styles from "../../../styles/Home.module.css";
+import styles from "../../../styles/util/googleMap.module.css";
 import { RefObject, useEffect, useRef } from "react";
 import { Loader } from "@googlemaps/js-api-loader";
 import { getRemInPx, isInViewport } from "../../util/common";

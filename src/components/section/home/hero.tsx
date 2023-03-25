@@ -1,4 +1,5 @@
-import styles from "../../../../styles/Home.module.css";
+import styles from "../../../../styles/section/home/hero.module.css";
+import sectionStyles from "../../../../styles/section/section.module.css";
 import { FloatingStars } from "../../util/floatingStars";
 import Head from "next/head";
 import { Document } from "@contentful/rich-text-types/dist/types/types";
@@ -12,7 +13,7 @@ export default function Hero({ heading, paragraph }: { heading: Document; paragr
       <Head>
         <link rel="preload" href="/img/hero-background-dark.jpg" as="image" />
       </Head>
-      <section className={styles.section + " " + styles.heroSection + " " + styles.sectionDarkPixels}>
+      <section className={sectionStyles.section + " " + styles.heroSection + " " + sectionStyles.sectionDarkPixels}>
         <FloatingStars />
         {heroHeading(heading)}
         {renderRichTextParagraph(paragraph, (children) => (

@@ -1,0 +1,6 @@
+.infiniteMovingSlideShowParent {
+  overflow: hidden;
+}
+.infiniteMovingSlideShow {
+  display: flex;
+}

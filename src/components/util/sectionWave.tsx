@@ -1,4 +1,4 @@
-import styles from "../../../styles/Home.module.css";
+import styles from "../../../styles/util/sectionWave.module.css";
 
 interface WaveProps {
   previousSectionClass?: string;
