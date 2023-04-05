@@ -25,8 +25,8 @@ export default function Header({ cmsEntry }: { cmsEntry: HeaderEntry }) {
     <>
       <section className={styles.header + (mobileNavOpen ? " " + styles.headerMobile : "")}>
         <FloatingStars className={mobileNavOpen ? "" : styles.hidden} />
-        <a className={styles.headerLogo + (mobileNavOpen ? " " + styles.headerLogoMobile : "")} href={""}>
-          <Logo aria-label="TKLM" />
+        <a className={styles.headerLogo + (mobileNavOpen ? " " + styles.headerLogoMobile : "")} href={process.env.PUBLIC_ABSOLUTE_URL}>
+          <Logo aria-label={process.env.PUBLIC_WEBSITE_NAME} />
         </a>
         <nav className={styles.navBar + (mobileNavOpen ? " " + styles.navBarMobile : "")}>
           <a className={styles.navBtn} href="#uslugi" onClick={navigateToFragment}>
