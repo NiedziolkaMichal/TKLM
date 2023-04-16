@@ -9,7 +9,7 @@ export function SharedHead() {
       <meta name="theme-color" content="#303030" />
       <link rel="icon" href="/favicon/favicon-32.png" sizes="32x32" />
       <link rel="icon" href="/favicon/favicon-16.png" sizes="16x16" />
-      <meta property="og:image" content={`${process.env.PUBLIC_ABSOLUTE_URL}/og-image.webp`} />
+      <meta property="og:image" content={`${process.env.NEXT_PUBLIC_ABSOLUTE_URL}/og-image.webp`} />
       <meta name="twitter:card" content="summary" />
     </Head>
   );

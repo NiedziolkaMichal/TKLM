@@ -12,7 +12,7 @@ export interface LogoEntry {
 
 export function renderRichText(richTextDocument: Document, options?: Options) {
   const replaceNewLines = (text: string) => {
-    return text.split("\n").reduce((children: ReactNode[], textSegment, index) => {
+    return text.split(/\r?\n/).reduce((children: ReactNode[], textSegment, index) => {
       return [...children, index > 0 && <br key={index} />, textSegment];
     }, []);
   };
